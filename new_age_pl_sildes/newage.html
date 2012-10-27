@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <!--
 Google IO 2012 HTML5 Slide Template
 
@@ -6,7 +7,6 @@ Authors: Eric Bidelman <ebidel@gmail.com>
 
 URL: https://code.google.com/p/io-2012-slides
 -->
-<!DOCTYPE html>
 <html>
 <head>
   <title>Google IO 2012</title>
@@ -21,19 +21,25 @@ URL: https://code.google.com/p/io-2012-slides
   <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
   <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+  <style>
+  h1.Takahashi{font-size:160px;margin:40px; text-align:center;}
+  h2.Takahashi{font-size:80px;margin:40px;}
+  h3.Takahashi{font-size:64px;margin:28px;}
+  </style>
 </head>
-<body style="opacity: 0">
+<body style="opacity: 0;">
 
 <slides class="layout-widescreen">
-
+<!--
   <slide class="logoslide nobackground">
     <article class="flexbox vcenter">
       <span><img src="images/google_developers_logo.png"></span>
     </article>
   </slide>
+-->
 
   <slide class="title-slide segue nobackground">
-    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
+    <aside class="gdbar"><img alt="google_icon" src="images/google_developers_icon_128.png"></aside>
     <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
     <hgroup class="auto-fadein">
       <h1 data-config-title><!-- populated from slide_config.json --></h1>
@@ -41,335 +47,720 @@ URL: https://code.google.com/p/io-2012-slides
       <p data-config-presenter><!-- populated from slide_config.json --></p>
     </hgroup>
   </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Bullets</h2>
-    </hgroup>
-    <article>
-      <ul>
-        <li>Titles are formatted as Open Sans with bold applied and font size is set at 45</li>
-        <li>Title capitalization is title case
-          <ul>
-            <li>Subtitle capitalization is title case</li>
-          </ul>
-        </li>
-        <li>Subtitle capitalization is title case</li>
-        <li>Titles and subtitles should never have a period at the end</li>
-      </ul>
-    </article>
+ 
+ <slide><hgroup>
+      <h2>History</h2>
+      </hgroup>
+      <article>
+      <iframe data-src="images/history_svg.html" style="max-height:480px; margin:auto;">
+      </iframe>
+      </article>
   </slide>
 
-  <slide>
-    <hgroup>
-      <h2>Slide with Bullets that Build</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <p>A list where items build:</p>
-      <ul class="build">
-        <li>Pressing 'h' highlights code snippets</li>
-        <li>Pressing 'p' toggles speaker notes (if they're on the current slide)</li>
-        <li>Pressing 'f' toggles fullscreen viewing</li>
-        <li>Pressing 'w' toggles widescreen</li>
-        <li>Pressing 'o' toggles overview mode</li>
-        <li>Pressing 'ESC' toggles off these goodies</li>
-      </ul>
-      <p>Another list, but items fade as they build:</p>
-      <ul class="build fade">
-        <li>Hover over me!</li>
-        <li>Hover over me!</li>
-        <li>Hover over me!</li>
-      </ul>
-    </article>
-  </slide>
+<slide>
+  <hgroup>
+    <h2>1950s</h2>
+  </hgroup>
+  <article>
+     <ul>
+     <li>Fortran
+      <ul><li>one of the oldest langauge</li></ul>
+     </li>
+     <li>Lisp
+      <ul><li>functional programming</li></ul>
+     </li>
+     <li>COBOL</li>
+     <li>Algol 60</li>
+     </ul>
+  </article>
+</slide>
 
-  <slide>
-    <hgroup>
-      <h2>Slide with (Smaller Font)</h2>
-    </hgroup>
-    <article class="smaller">
-      <ul>
-        <li>All <a href="http://google.com">links</a> open in new tabs.</li>
-        <li>To change that this, add <code>target="_self"</code> to the link.</li>
-      </ul>
-    </article>
-  </slide>
+<slide>
+  <hgroup>
+    <h2>1960s</h2>
+  </hgroup>
+  <article>
+    <ul>
+     <li>Pascal</li>
+     <li>C</li>
+     <li>Smalltalk
+       <ul><li>Object-Oriented Programming</li></ul>
+     </li>
+    </ul>
+  </article>
+</slide>
 
-  <slide hidden>
-    Hidden slides are left out of the presentation.
-  </slide>
+<slide>
+  <hgroup>
+    <h2>LISP Family</h2>
+  </hgroup>
+  <article>
+     <ul>
+     <li>Scheme</li>
+     <li>Common Lisp</li>
+     <li>Emacs Lisp</li>
+     </ul>
+  </article>
+</slide>
 
-  <slide>
-    <hgroup>
-      <h2>Code Slide (with Subtitle Placeholder)</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
-      <pre class="prettyprint" data-lang="xxxx">
-a = {}
-a['xddd']  = 4
-</pre>
-    </article>
-  </slide>
+<slide>
+  <hgroup>
+    <h2>C Family</h2>
+  </hgroup>
+  <article>
+     <ul>
+     <li>C</li>
+     <li>C++</li>
+     <li>Java</li>
+     <li>C#</li>
+     </ul>
+  </article>
+</slide>
 
-  <slide>
-    <hgroup>
-      <h2>Code Slide (Smaller Font)</h2>
-    </hgroup>
-    <article class="smaller">
-      <pre class="prettyprint" data-lang="javascript">
-// Say hello world until the user starts questioning
-// the meaningfulness of their existence.
-function helloWorld(world) {
-  for (var i = 42; --i &gt;= 0;) {
-    alert('Hello ' + String(world));
-  }
+<slide>
+  <hgroup>
+    <h2>Scripting Languages</h2>
+  </hgroup>
+  <article>
+     <ul>
+     <li>Perl</li>
+     <li>Python</li>
+     <li>Ruby</li>
+     <li>JavaScript</li>
+     </ul>
+     <p>And more...</p>
+  </article>
+</slide>
+
+<slide class="segue dark quote nobackground">
+  <aside class="gdbar right bottom"><img alt="google_icon" src="images/google_developers_icon_128.png"></aside>
+  <article class="flexbox vleft auto-fadein">
+    <q>
+      Learning a new language gives you new ideas and insights.
+    </q>
+    <div class="author">
+      Matz<br>
+      Designer of Ruby
+    </div>
+  </article>
+</slide>
+
+
+<slide>
+<hgroup>
+<h2>Let's print stars</h2>
+</hgroup>
+<article>
+<p>This must have been your homework...</p>
+<pre class="prettyprint" data-lang="output">
+*
+**
+***
+****
+*****
+</pre>    
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Think in C's way</h2>
+</hgroup>
+<article>
+<pre class="prettyprint" data-lang="C">
+#include &lt;stdio.h&gt;
+void main(){
+    int i, j;
+    for(i = 1 ; i &lt;= 5 ; ++i){
+        for(j = 0 ; j &lt; i ; ++j)
+            printf("*");
+        printf("\n");
+    }
 }
+
+</pre>    
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Think in LISP's way</h2>
+</hgroup>
+<article>
+<pre class="prettyprint" data-lang="Common Lisp">
+(defun star-line(n)
+  (when (&gt; n 0)
+    (format t "*")
+    (star-line (- n 1))))
+
+(defun stars(n end)
+  (when (&lt;= n end)
+    (star-line n)
+    (format t "~%")
+    (stars (+ n 1) end)))
+
+(stars 1 5)
+</pre>    
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Think in LISP's way (C code)</h2>
+</hgroup>
+<article>
+<pre class="prettyprint" data-lang="C">
+void StarLine(int n){
+    if(n &gt; 0){
+        printf("*");
+        StarLine(n-1);
+    }
+}
+
+void Stars(int n, int end){
+    if(n &lt;= end){
+        StarLine(n);
+        printf("\n");
+        Stars(n+1 , end);
+    }
+}
+</pre>    
+</article>
+</slide>
+
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">Functions, Recursions, ...</h2>
+<h3 class="Takahashi">&nbsp;&nbsp;&nbsp;will become</h3>
+<h1 class="Takahashi">your ideas</h1>
+</hgroup>
+</slide>
+
+<!-- Developments of C-based Languages -->
+<slide>
+<hgroup>
+<h2 class="Takahashi">Developments of </h2>
+<h2 class="Takahashi">C-based Languages</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h3 class="Takahashi">Object-Oriented Programming</h3>
+<h1 class="Takahashi">OOP</h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>non-oop / oop</h2>
+</hgroup>
+<article>
+<pre class="prettyprint">
+run(cat)
+weight_of(cat)
+
+// OOP
+cat.run
+cat.get_weight
+</pre>    
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>A Object Has....</h2>
+</hgroup>
+<article>
+<pre class="prettyprint" data-lang="C++">
+class Cat{
+  float weight; // member variable (attribute)
+  float feet[4];
+  
+public:
+  float getWeight(); // member function (method)
+  void  run();
+};
+</pre>    
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>String in C/C++</h2>
+</hgroup>
+<article>
+<pre class="prettyprint" data-lang="C">
+int strlen(char[] str){
+    int i = 0;
+    while(str[i] != '\0'){ ++i; }
+    return i;
+}
+
+int main(){
+    char s[]   = "String in C is not a object.";
+    int length = strlen(s);
+}
+</pre> 
+<pre class="prettyprint" data-lang="C++">
+#include &lt;string&gt;
+using std::string;
+int main(){
+    string s   = "A string object in C++.";
+    int length = s.length();
+}
+</pre>   
+</article>
+</slide>
+
+
+<slide>
+<hgroup>
+<h2>Inheritance</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="C++">
+#include &lt;stdio.h&gt;
+struct Square{
+    int side;
+    int area(){ return side * side; }
+};
+
+struct Cube : public Square{ // Cube inherit Square
+    int volume(){ return area() * side; }
+};
+
+int main(){
+    Cube c;
+    c.side = 2;
+    printf("%d %d", c.area(), c.volume());
+    // output: 4 8
+}
+</pre>   
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h3 class="Takahashi">Function Overloading</h3>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Absolute Value in C</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="C">
+/* in &lt;stdlib.h&gt; */
+int abs(int a){ 
+    if(a &lt; 0) return -a;
+    else return a;
+}
+
+/* in &lt;math.h&gt; */
+float fabs(float a){ 
+    if(a &lt; 0) return -a;
+    else return a;
+}
+</pre>   
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Absolute Value in C</h2>
+</hgroup>
+<article>
+<pre class="prettyprint" data-lang="C">
+/* we have two function */
+int   abs(int a){...}
+float fabs(float a){...}
+
+/* and than.. */
+int main(){
+    int   n = -1;
+    float f = -10.0;    
+    abs(n); // gets 1 
+    <b>abs(f); // error!</b>
+
+    fabs(f);// gets 10.0
+}
+</pre>   
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Absolute Value in C++</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="C++">
+int   myAbs(int a){...}
+float myAbs(float a){...}
+
+int main(){
+    int   n = -10;
+    float f = -20.0;
+
+    // both of n and f can use "myABS"
+    myAbs(n);
+    myAbs(f);
+}
+</pre>   
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h3 class="Takahashi">&nbsp;&nbsp;Java & C#</h3>
+<h2 class="Takahashi">Auto Garbage Collection</h2>
+<br/><br/>
+<h2 style="text-align:right;">&nbsp;&nbsp;&nbsp;&nbsp;Learn from LISP</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>C++ Memory Allocate</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="C++">
+class Cat{...};
+
+int main(){
+    Cat* cat = new Cat();
+    delete cat;
+
+    for(int i = 0 ; i &lt; 1000 ; ++i){
+        Cat* neko = new Cat();
+        // ... forget to delete
+    }
+    
+    // there are 1000 Cats in ur memory..
+}
+</pre>   
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Java - Auto Garbage Collection</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="java">
+public class Garbage{
+    class Cat{ ... }
+    
+    public static main(String args[]){
+        for(int i = 0 ; i &lt; 1000 ; ++i){
+            Cat neko = new Cat();
+            // do not need to delete
+        }
+        // no Cats here
+    }
+}
+</pre>   
+</article>
+</slide>
+
+<slide>
+    <hgroup>
+      <h2>Others</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Operator Overloading</li>
+        <li>Reference</li>
+        <li>Generic Type</li>
+        <li>Namespace</li>
+        <li>Exception Handling</li>
+        <li>Cross-platform (Java JVM & C# .NET)</li>
+        <li>Reflection (C#)</li>
+      </ul>
+    </article>
+  </slide>
+
+<!-- Scripting Languages -->
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">Scripting</h1>
+<h1 class="Takahashi">Langauges</h1>
+</hgroup>
+</slide>
+
+<slide class="segue dark quote nobackground">
+  <aside class="gdbar right bottom"><img alt="google_icon" src="images/google_developers_icon_128.png"></aside>
+  <article class="flexbox vleft auto-fadein">
+    <q>
+      There are two kinds of programmers...
+    </q>
+    <div class="author">
+      高橋征義<br>
+      日本Rubyの会
+    </div>
+  </article>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">Lazy</h1>
+<h1 class="Takahashi">People</h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">Hard-</h1>
+<h1 class="Takahashi">Worker</h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h3 class="Takahashi">Languages of Hard-worker</h3>
+<h2 class="Takahashi">COBOL</h2>
+<h2 class="Takahashi">C/C++</h2>
+<h2 class="Takahashi">Java</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">1000 lines for 1 method</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h3 class="Takahashi">Languages of Lazy People</h3>
+<h2 class="Takahashi">Perl</h2>
+<h2 class="Takahashi">Python</h2>
+<h2 class="Takahashi">Ruby</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">1 line for 1000 methods</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>A Table by C Beginner</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="C">
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(){
+    char* table[50][2]; int i; // 50 people have name and hobby
+    table[0][0] = "John";
+    table[0][1] = "reading";
+    table[1][0] = "Hanako";
+    table[1][1] = "playing GalGame";
+    // and so on...
+    
+    for(i = 0 ; i &lt; 50 ; ++i){ // find Hanako's hobby
+        if(strcmp(table[i][0], "Hanako") == 0)
+            printf("%s\n", table[i][1]);
+    }
+}
+</pre>   
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">Ugly, Unreadable, Slow</h2>
+</hgroup>
+</slide>
+
+
+<slide>
+<hgroup>
+<h2>A Table by <span class="red">Ruby</span> Beginner</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="ruby">
+table = {}
+table["John"]   = "reading"
+table["Hanako"] = "playing GalGame"
+
+# find hobby of Hanako
+puts table["Hanako"]
+</pre>   
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi" style="text-align:center">Beautiful</h2>
+<h2 class="Takahashi" style="text-align:center">Easy to Read</h2>
+</hgroup>
+</slide>
+
+<!-- Features of Perl, Python and Ruby -->
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">Features</h1>
+<h3 class="Takahashi" style="text-align:center">of Perl, Python and Ruby</h3>
+</hgroup>
+</slide>
+
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">Dynamic Typing</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Static Typing&nbsp;&nbsp;v.s.&nbsp;&nbsp;Dynamic Typing</h2>
+</hgroup>
+<article class="build">
+<pre class="prettyprint" data-lang="java">
+int a = 1;               // a integer
+float b = 10.0;          // a float
+int[] ary = new int[10]; // an array of integers
 </pre>
-<pre class="prettyprint" data-lang="css">
-&lt;style&gt;
-  p { color: pink }
-  b { color: blue }
-&lt;/style&gt;
+
+<pre class="prettyprint" data-lang="python" style="margin-top:80px;">
+a = 1            # a integer
+b = 10.0         # a float
+ary = [1,2,3,4]  # an array
+
+a = 3.1415926    # 'a' is a float now
+</pre>   
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">Auto Garbage Collection</h2>
+<p style="text-align:right;">I have told you.</p>
+</hgroup>
+</slide>
+
+
+
+<!-- data types -->
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">Convenient Data Types</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">String</h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>I make a string in C...</h2>
+</hgroup>
+<article>
+<pre class="prettyprint" data-lang="c">
+char s[] = "Prof. T.C. Chiang";
+
+// I want to append another string to 's'
+// I want to replace part of the string
+
+// I want get a part of 's'
+// I want to compare 's' with other string...
 </pre>
-<pre class="prettyprint" data-lang="html">
-&lt;!DOCTYPE html>
-&lt;html>
-&lt;head>
-  &lt;title>My Awesome Page&lt;/title>
-&lt;/head>
-&lt;body>
-  &lt;p&gt;Hello world&lt;/p&gt;
-&lt;body>
-&lt;/html>
+
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h2 class="Takahashi">I don't know how to.</h2>
+<h3 class="Takahashi">&nbsp;</h3>
+<h2 class="Takahashi">So I read books...</h2>
+<h2 class="Takahashi">Google "C string" ...</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">After an hour</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">I done </h2>
+<h1 class="Takahashi">nothing!</h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>String in Ruby</h2>
+</hgroup>
+<article  class="build">
+<pre class="prettyprint" data-lang="ruby">
+s = 'Prof. T.C. Chiang'   # =&gt; "Prof. T.C. Chiang i 90"
+
+s = s + ' i 90'           # =&gt; "Prof. T.C. Chiang i 90"
+
+s.length                  # =&gt; 22
 </pre>
-    </article>
-  </slide>
+<pre class="prettyprint" data-lang="ruby">
+s['i 90'] = 'loves Jolin' # =&gt; "Prof. T.C. Chiang loves Jolin"
+s[11]                     # =&gt; "C"
+s[11..-1]                 # =&gt; "Chiang loves Jolin"
+</pre>
+<pre class="prettyprint" data-lang="ruby">
+'Chiang' &gt; 'Jolin'        # =&gt; false
 
-  <slide>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>Point I wanted to make #1</li>
-          <li>Point I wanted to make #2</li>
-          <li>Point I wanted to make #3</li>
-          <li>Example <a href="#">link</a> in notes.</li>
-        </ul>
-        <p><b>Remember to say this tag line!</b></p>
-      </section>
-    </aside>
-    <hgroup>
-      <h2>Slide with Speaker Notes</h2>
-    </hgroup>
-    <article>
-      <p>Press 'p' to toggle speaker notes.</p>
-    </article>
-  </slide>
+'2012'.to_i               # =&gt; 2012 (Fixnum)
+</pre>
+</article>
+</slide>
 
-  <slide>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>See this amazing link: <a href="http://www.google.com">link</a>.</li>
-        </ul>
-        <p><b>Remember to say this tag line!</b></p>
-      </section>
-    </aside>
-    <hgroup>
-      <h2>Presenter Mode</h2>
-    </hgroup>
-    <article>
-      <p>Add <code><a href="?presentme=true" target="_self">?presentme=true</a></code> to the URL to enabled presenter mode.
-      This setting is sticky, meaning refreshing the page will persist presenter
-      mode.</p>
-      <p>Hit <code><a href="?presentme=false" target="_self">?presentme=false</a></code> to disable presenter mode.</p>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Image</h2>
-    </hgroup>
-    <article>
-      <img src="images/chart.png" class="reflect" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Image (Centered horz/vert)</h2>
-    </hgroup>
-    <article class="flexbox vcenter">
-      <img src="images/barchart.png" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option A</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option A (Smaller Text)</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article class="smaller">
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Table Option B</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-    <article>
-      <table class="rows">
-        <tr>
-          <th>Header 1</th><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 2</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 3</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 4</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 5</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide Styles</h2>
-    </hgroup>
-    <article class="smaller">
-      <div class="columns-2">
-        <ul>
-          <li class="red">class="red"</li>
-          <li class="red2">class="red2"</li>
-          <li class="red3">class="red3"</li>
-          <li class="blue">class="blue"</li>
-          <li class="blue2">class="blue2"</li>
-          <li class="blue3">class="blue3"</li>
-          <li class="green">class="green"</li>
-          <li class="green2">class="green2"</li>
-        </ul>
-        <ul>
-          <li class="green3">class="green3"</li>
-          <li class="yellow">class="yellow"</li>
-          <li class="yellow2">class="yellow2"</li>
-          <li class="yellow3">class="yellow3"</li>
-          <li class="gray">class="gray"</li>
-          <li class="gray2">class="gray2"</li>
-          <li class="gray3">class="gray3"</li>
-          <li class="gray4">class="gray4"</li>
-        </ul>
-      </div>
-      <div class="centered" style="margin-top:2em">
-        I am centered text with a <button>Button</button> and <button disabled>Disabled</button> button.
-      </div>
-    </article>
-  </slide>
-
-  <slide class="segue dark nobackground">
-    <aside class="gdbar"><img src="images/google_developers_icon_128.png"></aside>
-    <hgroup class="auto-fadein">
-      <h2>Segue Slide</h2>
-      <h3>Subtitle Placeholder</h3>
-    </hgroup>
-  </slide>
-
-  <slide class="fill nobackground" style="background-image: url(images/sky.jpg)">
-    <hgroup>
-      <h2 class="white">Full Image (with Optional Header)</h2>
-    </hgroup>
-    <footer class="source white">www.flickr.com/photos/25797459@N06/5438799763/</footer>
-  </slide>
-
-  <slide class="segue dark quote nobackground">
-    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
-    <article class="flexbox vleft auto-fadein">
-      <q>
-        This is an example of quote text.
-      </q>
-      <div class="author">
-        Name<br>
-        Company
-      </div>
-    </article>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Slide with Iframe</h2>
-    </hgroup>
-    <article>
-      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
-    </article>
-  </slide>
-
-  <slide>
-    <article>
-      <iframe data-src="http://www.google.com/doodle4google/history.html"></iframe>
-    </article>
-  </slide>
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">Hash</h1>
+</hgroup>
+<article>
+<p style="text-align:center;">also called "Dictionary" or "Associative Array"</p>
+</article>
+</slide>
+<!-- --ending-- -->
 
   <slide class="thank-you-slide segue nobackground">
-    <aside class="gdbar right"><img src="images/google_developers_icon_128.png"></aside>
+    <aside class="gdbar right"><img alt="google_icon" src="images/google_developers_icon_128.png"></aside>
     <article class="flexbox vleft auto-fadein">
       <h2>&lt;Thank You!&gt;</h2>
       <p>Important contact information goes here.</p>
@@ -381,7 +772,7 @@ function helloWorld(world) {
 
   <slide class="logoslide dark nobackground">
     <article class="flexbox vcenter">
-      <span><img src="images/google_developers_logo_white.png"></span>
+      <span><img alt="google_developers_logo" src="images/google_developers_logo_white.png"></span>
     </article>
   </slide>
 
