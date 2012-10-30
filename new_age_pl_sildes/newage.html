@@ -928,7 +928,7 @@ a[8] = 8          # =&gt; [1, 2, 3, 4, 1, 2, 3, 4, <b>8</b>]
 <hgroup>
 <h2>Length is <span class="red">Not</span> fixed!</h2>
 </hgroup>
-<article class="build">
+<article>
 
 <pre class="prettyprint" data-lang="python">
 a = [0] * 4       # =&gt; [0, 0, 0, 0]
@@ -941,6 +941,63 @@ a                 # =&gt; [0, 0, 0, 0, 1, 4, 5]
 </article>
 </slide>
 
+<slide>
+<hgroup>
+<h2>Easy to copy ,Easy to merge</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="python">
+a = [1,2,3,4]
+
+#copy
+b = list(a)     # b is a clone of a
+
+#merge
+c = a + [3,2,1] # =&gt; [1, 2, 3, 4, 3, 2, 1] 
+</pre>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Mutitype</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="python">
+a = [0, 3.14, 'String here!', [1,2,3] ]
+
+a[1] # =&gt; 3.14 (float)
+a[2] # =&gt; "String here!" (string)
+a[3] # =&gt; [1, 2, 3] (list)
+</pre>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Get a part of an array</h2>
+</hgroup>
+<article class="build">
+
+<pre class="prettyprint" data-lang="ruby">
+a = [1, 2, 3, 4]
+a[0..2]   # =&gt; [1, 2, 3]
+a[1 ..-1] # =&gt; [2, 3, 4]
+</pre>
+
+<pre class="prettyprint" data-lang="python">
+a = [1, 2, 3, 4]
+
+a[0:2]   # =&gt; [1, 2]
+a[:2]    # =&gt; [1, 2]
+
+a[1:-1] # =&gt; [2, 3]
+a[1:]   # =&gt; [2, 3, 4]
+</pre>
+</article>
+</slide>
 
 <slide>
 <hgroup>
@@ -951,6 +1008,46 @@ a                 # =&gt; [0, 0, 0, 0, 1, 4, 5]
 <p style="text-align:center;">also called "Dictionary" or "Associative Array"</p>
 </article>
 </slide>
+
+<slide>
+<hgroup>
+<h2>Using hash in Ruby</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="ruby">
+lang = { :Ruby =&gt; 'easy', :Python =&gt; 'clean', :Perl =&gt; 'ugly' }
+lang[:Lisp] = 'funny'
+lang[:C] = 'fast'
+
+puts lang[:Python] # =&gt; clean
+
+lang.each_pair do |key, value|
+  puts key.to_s + ' is ' + value
+end
+
+lang.delete :C
+</pre>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">Easy to Write</h2>
+<h2 class="Takahashi">Easy to Read</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">O(1)</h1>
+<h3 class="Takahashi" style="text-align:center;">Time Complexity</h3>
+</hgroup>
+</slide>
+
+
 <!-- --ending-- -->
 
   <slide class="thank-you-slide segue nobackground">
