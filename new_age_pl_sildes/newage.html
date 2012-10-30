@@ -729,7 +729,7 @@ char s[] = "Prof. T.C. Chiang";
 </hgroup>
 <article  class="build">
 <pre class="prettyprint" data-lang="ruby">
-s = 'Prof. T.C. Chiang'   # =&gt; "Prof. T.C. Chiang i 90"
+s = 'Prof. T.C. Chiang'   # =&gt; "Prof. T.C. Chiang"
 
 s = s + ' i 90'           # =&gt; "Prof. T.C. Chiang i 90"
 
@@ -747,6 +747,200 @@ s[11..-1]                 # =&gt; "Chiang loves Jolin"
 </pre>
 </article>
 </slide>
+
+<!-- array -->
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">Array</h1>
+</hgroup>
+<article>
+<p style="text-align:center;">called "list" in Python</p>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Let's look at C's array</h2>
+</hgroup>
+<article  class="build">
+
+<pre class="prettyprint" data-lang="c">
+int ary[100];
+</pre>
+<h2 class="Takahashi">Looks nothing wrong</h2>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">But!</h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Unsafe</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="c">
+int ary[100], i;
+for(i = 0 ; <b>i &lt;= 100</b> ; ++i)
+  ary[i] = i;
+</pre>
+<div class="build">
+<p>Compiler won't tell you anything.</p>
+<p>You won't know the bug even at runtime. </p>
+</div>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Bothersome</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="c">
+<b>#define ARY1_LEN 40 // Macro is bad.
+#define ARY2_LEN 20
+#define STR1_SIZE 36</b>
+
+int main(){
+    int ary1[ARY1_LEN], ary2[ARY2_LEN];
+    char str1[STR1_SIZE];
+}
+
+// 2 parameters to send an array.
+void SetAryValue(<b>int a[]</b>, int v, <b>int length</b>){
+    int i;
+    for(i = 0 ; i &lt; length ; ++i)
+        a[i] = v;
+}
+
+</pre>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Waste Space</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="c">
+int main(){
+    int numbers[1000], n, temp, i;
+    scanf("%d", &n);
+    for(i = 0 ; i &lt; n ; ++i)
+        scanf("%d", &numbers[i]);
+}
+
+</pre>
+<ul class="build">
+<li>User input&nbsp;: 10</li>
+<li>Utility rate&nbsp;: 1%</li>
+<li>And maybe 1001 integers will be need?</li>
+</ul>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>A function to <span class="blue">Merge</span> an array</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="c">
+int* Merge(int a[], int b[], int a_size, int b_size){
+    int* new_ary = malloc( (a_size + b_size) * sizeof(int) );
+    int  i;
+    
+    for(i = 0 ; i &lt; a_size ; ++i)
+        new_ary[i] = a[i];
+        
+    for(i = 0 ; i &lt; b_size ; ++i)
+        new_ary[a_size + i] = b[i];
+        
+    return new_ary;
+}
+</pre>
+<ul class="build">
+<li>Rember to deallocate!</li>
+</ul>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">ZZZ... ZZZ...</h1>
+<h3 class="Takahashi">ZZZ... ZZZ... ZZZ... ZZZZZZZ...</h3>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">In <span class="red">Ruby</span></h1>
+<h2 style="text-align:center;">and <b>Python</b></h3>
+</hgroup>
+<article>
+<p style="text-align:center;">and Perl</p>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp</h2>
+<h2 class="Takahashi">Those will</h2>
+<h1 class="Takahashi">Never</h1>
+<h2 class="Takahashi" style="text-align:right;">worry you!</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Length is an attribute of an Array</h2>
+</hgroup>
+<article class="build">
+
+<pre class="prettyprint" data-lang="python">
+a = [1,2,3,4]
+len(a)        # =&gt; 4
+
+a[8] = 8      # =&gt; show a error message
+</pre>
+
+<pre class="prettyprint" data-lang="ruby">
+a = [1,2,3,4] * 2 # =&gt; [1, 2, 3, 4, 1, 2, 3, 4]
+a.length          # =&gt; 8
+
+a[8] = 8          # =&gt; [1, 2, 3, 4, 1, 2, 3, 4, <b>8</b>]
+</pre>
+
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Length is <span class="red">Not</span> fixed!</h2>
+</hgroup>
+<article class="build">
+
+<pre class="prettyprint" data-lang="python">
+a = [0] * 4       # =&gt; [0, 0, 0, 0]
+a.append(1)       # =&gt; [0, 0, 0, 0, 1]
+a.extend([4,5,6]) # =&gt; [0, 0, 0, 0, 1, 4, 5, 6]
+
+a.pop()           # =&gt; 6
+a                 # =&gt; [0, 0, 0, 0, 1, 4, 5]
+</pre>
+</article>
+</slide>
+
 
 <slide>
 <hgroup>
