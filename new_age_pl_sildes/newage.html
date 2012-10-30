@@ -1016,9 +1016,9 @@ a[1:]   # =&gt; [2, 3, 4]
 <article>
 
 <pre class="prettyprint" data-lang="ruby">
-lang = { :Ruby =&gt; 'easy', :Python =&gt; 'clean', :Perl =&gt; 'ugly' }
-lang[:Lisp] = 'funny'
-lang[:C] = 'fast'
+lang = { :ruby =&gt; 'easy', :python =&gt; 'clean', :perl =&gt; 'ugly' }
+lang[:lisp] = 'funny'
+lang[:c] = 'fast'
 
 puts lang[:Python] # =&gt; clean
 
@@ -1026,7 +1026,44 @@ lang.each_pair do |key, value|
   puts key.to_s + ' is ' + value
 end
 
-lang.delete :C
+lang.delete :c
+</pre>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>In Ruby, any object can be a key/value</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="ruby">
+hash = {}
+
+hash[0]         = 'value'
+hash['string']  = ['this', 'is', 'an', 'array']
+hash[:symbol]   = 'classic hash'
+hash[ [1,2,3] ] = 'an array as a key!'
+</pre>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>In Python, <br/>
+the <span class="red">keys</span> must be of an <span class="blue">immutable</span> data type.</h2>
+</hgroup>
+<article>
+<p>(strings, numbers, or tuples...)</p>
+
+<pre class="prettyprint" data-lang="python">
+d = dict()
+
+d[2]        = 'number'
+d['XD']     = 'string'
+d[(2,4,6)]  = 'tuple'
+
+d # =&gt; {2: 'number', (2, 4, 6): 'tuple', 'XD': 'string'}
 </pre>
 </article>
 </slide>
