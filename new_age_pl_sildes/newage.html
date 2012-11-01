@@ -1084,6 +1084,149 @@ d # =&gt; {2: 'number', (2, 4, 6): 'tuple', 'XD': 'string'}
 </hgroup>
 </slide>
 
+<!-- Convenient Syntax -->
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">Convenient Syntax</h2>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">swap!</h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>C swap</h2>
+</hgroup>
+<article class="build">
+
+<pre class="prettyprint" data-lang="c">
+#define INT_SWAP(a,b) {int temp=a; a=b; b=temp;}
+
+int main(){
+    int c, d;
+    INT_SWAP(c,d);
+}
+</pre>
+
+<pre class="prettyprint" data-lang="c">
+int main(){
+    int a, b;
+    a ^= b ^= a ^= b;
+}
+</pre>
+<p class="red">Don't use this!</p>
+
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>C swap function</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="c">
+void swap(int* a, int* b){int temp = *a; *a = *b; *b = temp;}
+
+int main(){
+    int a, b;
+    swap(&amp;a, &amp;b);
+}
+</pre>
+
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>C++ swap function</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="c++">
+void swap(int&amp; a, int&amp; b){int temp = a; a=b; b=temp;}
+
+int main(){
+    int a, b;
+    swap(a,b);
+}
+</pre>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>C++ swap (template)</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="c++">
+template&lt;class T&gt;
+void swap(T&amp; a, T&amp; b){T temp = a; a = b; b = temp;}
+
+int main(){
+    int a, b;
+    float c, d;
+    
+    swap(a,b);
+    swap(c,d);
+}
+</pre>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Java swap</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="java">
+int a, b;
+// ...
+int temp = a;
+a = b;
+b = temp;
+</pre>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h3 class="Takahashi">In Prel, Python, Ruby, Go...</h3>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h1 class="Takahashi">a, b = b, a</h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">Introduction To</h2>
+<h3 class="Takahashi" style="text-align:center;">Perl, Python and Ruby</h3>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">Interpreter and Compiler</h2>
+<h3 class="Takahashi" style="text-align:center;">Perl, Python and Ruby</h3>
+</hgroup>
+</slide>
 
 <!-- --ending-- -->
 
