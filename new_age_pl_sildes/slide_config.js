@@ -19,7 +19,7 @@ var SLIDE_CONFIG = {
   // Author information
   presenters: [{
     name: 'N.S. Lin',
-    company: 'Player, NTNU.tw',
+    company: 'Troll, NTNU.tw',
     gplus: 'http://plus.google.com/1234567890',
     twitter: '',
     www: 'http://www.csie.ntnu.edu.tw/~u99256',

@@ -558,6 +558,15 @@ public class Garbage{
 
 <slide>
 <hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">以上言論不代表本人立場</h2>
+</hgroup>
+</slide>
+
+
+
+<slide>
+<hgroup>
 <h2>A Table by C Beginner</h2>
 </hgroup>
 <article>
@@ -671,6 +680,77 @@ a = 3.1415926    # 'a' is a float now
    
   </article>
 </slide>
+
+<slide>
+<hgroup>
+<h2>Non-Duck-Typing</h2>
+</hgroup>
+<article class="build">
+<pre class="prettyprint" data-lang="c">
+#include &lt;stdio.h&gt;
+
+typedef struct{
+  int foot_num;
+  /* ... */
+} Duck;
+
+typedef struct{
+  int foot_num;
+  /* ... */
+} Human;
+
+
+void DuckWalk(Duck duck){
+    printf("I walk with %d feet!\n", duck.foot_num);
+}
+</pre>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Duck-Typing in Ruby</h2>
+</hgroup>
+<article class="build">
+<pre class="prettyprint" data-lang="ruby">
+class Duck
+  def quack()
+    puts "Quaaaaaaack!"
+  end
+end
+
+class Human
+  def quack()
+    puts "XDDDDDDD!"
+  end
+end
+
+def duck_quack(duck)
+  duck.quack()
+end
+</pre>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Duck-Typing in Python</h2>
+</hgroup>
+<article class="build">
+<pre class="prettyprint" data-lang="python">
+def min(a, b):
+    return a if a &lt; b else b
+    
+
+min(100,1)              # =&gt; 1
+
+min("Nanoha", "Madoka") # =&gt; 'Madoka'
+
+min([1,2,3], [3,2,1])   # =&gt; [1, 2, 3]
+</pre>
+</article>
+</slide>
+
 
 <slide>
 <hgroup>
@@ -1231,9 +1311,8 @@ b = temp;
 
 <slide>
 <hgroup>
-
-<h3 style="text-align:center;">lots of</h3>
-<h1 class="Takahashi" style="text-align:center;">Open Sources</h1>
+<h3 style="text-align:center;">&nbsp;</h3>
+<h1 class="Takahashi" style="text-align:center;">Open Source</h1>
 </hgroup>
 </slide>
 
@@ -1246,11 +1325,85 @@ b = temp;
 </hgroup>
 </slide>
 
+<!-- Perl -->
+
+<slide>
+  <article>
+    <img src="images/programming_perl.jpg" class="reflect" alt="Programming Perl" style="height:520px;">
+    <footer class="source">Cover of the book "Programming Perl"</footer>
+  </article>
+</slide>
+
+<slide>
+  <article>
+    <img src="images/learn_perl.jpg" class="reflect" alt="Learning Perl" style="height:520px;">
+    <footer class="source">Cover of the book "Learning Perl"</footer>
+  </article>
+</slide>
+
+
+<slide>
+  <article>
+    <img src="images/AlpacaBook.jpg" class="reflect" alt="Intermediate Perl" style="height:520px;">
+    <footer class="source">Cover of the book "Intermediate Perl"</footer>
+  </article>
+</slide>
+
+<slide>
+  <article>
+    <img src="images/AlpacaBook.jpg" class="reflect" alt="Intermediate Perl" style="height:520px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="images/Alpaca.jpg" class="reflect" alt="Alpaca" style="height:520px;">
+    <footer class="source">Cover of the book "Intermediate Perl"</footer>
+  </article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Perl</h2>
+</hgroup>
+
+<article>
+<ul>
+<li>Designed by	Larry Wall<br/><br/>
+    <img alt="Larry Wall" src="images/Larry_Wall.jpg"></li>
+</ul>
+</article>
+</slide>
+
 <slide>
 <hgroup>
 <h1 class="Takahashi">&nbsp;</h1>
-<h2 class="Takahashi">Interpreter and Compiler</h2>
-<h3 class="Takahashi" style="text-align:center;">Perl, Python and Ruby</h3>
+<h2> <span class="blue3">P</span>athologically 
+     <span class="blue3">E</span>clectic 
+     <span class="blue3">R</span>ubbish 
+     <span class="blue3">L</span>ister</h2>
+</hgroup>
+</slide>
+
+<slide class="segue dark quote nobackground">
+  <aside class="gdbar right bottom"><img alt="google_icon" src="images/google_developers_icon_128.png"></aside>
+  <article class="flexbox vleft auto-fadein">
+    <q>
+      There's More Than One Way To Do It.
+    </q>
+   
+  </article>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h2>&nbsp;</h2>
+<h1 class="Takahashi">$@#&!</h1>
+</hgroup>
+</slide>
+
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">Interpreter </h2>
+<h2 class="Takahashi">and Compiler</h2>
 </hgroup>
 </slide>
 
