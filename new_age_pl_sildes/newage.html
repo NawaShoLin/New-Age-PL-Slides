@@ -25,6 +25,7 @@ URL: https://code.google.com/p/io-2012-slides
   h1.Takahashi{font-size:160px;margin:40px; text-align:center;}
   h2.Takahashi{font-size:80px;margin:40px;}
   h3.Takahashi{font-size:64px;margin:28px;}
+  .centre{text-align:center;}
   </style>
 </head>
 <body style="opacity: 0;">
@@ -111,10 +112,142 @@ URL: https://code.google.com/p/io-2012-slides
      <ul>
      <li>C</li>
      <li>C++</li>
+     <li>Objective-C</li>
      <li>Java</li>
      <li>C#</li>
      </ul>
   </article>
+</slide>
+
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h2 class="Takahashi">Structured</h2>
+<h2 class="Takahashi">Programming</h2>
+<h3 style="text-align:center;">Algol, PASCAL, C ...</h3>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2 style="text-align:center;">Structured Programming</h2>
+</hgroup>
+<article>
+<ul>
+<li>Sequence</li>
+<li>Selection</li>
+<li>Repetition</li>
+<li>Subroutine</li>
+</ul>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h2 class="Takahashi">Functional</h2>
+<h2 class="Takahashi">Programming</h2>
+<h3 style="text-align:center;">Lisp, Erlang, Haskell ...</h3>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h3 class="Takahashi">Object-Oriented Programming</h3>
+<h1 class="Takahashi">OOP</h1>
+<h3 style="text-align:center;">Smalltalk, C++, Ruby ...</h3>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>non-oop / oop</h2>
+</hgroup>
+<article>
+<pre class="prettyprint">
+run(cat)
+weight_of(cat)
+
+// OOP
+cat.run
+cat.get_weight
+</pre>    
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>A Object Has....</h2>
+</hgroup>
+<article>
+<pre class="prettyprint" data-lang="C++">
+class Cat{
+  float weight; // member variable (member, attribute..)
+  float feet[4];
+  
+public:
+  float getWeight(); // member function (method)
+  void  run();
+};
+</pre>    
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>String in C/C++</h2>
+</hgroup>
+<article>
+<pre class="prettyprint" data-lang="C">
+int strlen(char[] str){
+    int i = 0;
+    while(str[i] != '\0'){ ++i; }
+    return i;
+}
+
+int main(){
+    char s[]   = "String in C is not a object.";
+    int length = strlen(s);
+}
+</pre> 
+<pre class="prettyprint" data-lang="C++">
+#include &lt;string&gt;
+using std::string;
+int main(){
+    string s   = "A string object in C++.";
+    int length = s.length();
+}
+</pre>   
+</article>
+</slide>
+
+
+<slide>
+<hgroup>
+<h2>Inheritance</h2>
+</hgroup>
+<article>
+
+<pre class="prettyprint" data-lang="C++">
+#include &lt;stdio.h&gt;
+struct Square{
+    int side;
+    int area(){ return side * side; }
+};
+
+struct Cube : public Square{ // Cube inherit Square
+    int volume(){ return area() * side; }
+};
+
+int main(){
+    Cube c;
+    c.side = 2;
+    printf("%d %d", c.area(), c.volume());
+    // output: 4 8
+}
+</pre>   
+</article>
 </slide>
 
 <slide>
@@ -245,102 +378,7 @@ void Stars(int n, int end){
 </hgroup>
 </slide>
 
-<slide>
-<hgroup>
-<h3 class="Takahashi">Object-Oriented Programming</h3>
-<h1 class="Takahashi">OOP</h1>
-</hgroup>
-</slide>
 
-<slide>
-<hgroup>
-<h2>non-oop / oop</h2>
-</hgroup>
-<article>
-<pre class="prettyprint">
-run(cat)
-weight_of(cat)
-
-// OOP
-cat.run
-cat.get_weight
-</pre>    
-</article>
-</slide>
-
-<slide>
-<hgroup>
-<h2>A Object Has....</h2>
-</hgroup>
-<article>
-<pre class="prettyprint" data-lang="C++">
-class Cat{
-  float weight; // member variable (attribute)
-  float feet[4];
-  
-public:
-  float getWeight(); // member function (method)
-  void  run();
-};
-</pre>    
-</article>
-</slide>
-
-<slide>
-<hgroup>
-<h2>String in C/C++</h2>
-</hgroup>
-<article>
-<pre class="prettyprint" data-lang="C">
-int strlen(char[] str){
-    int i = 0;
-    while(str[i] != '\0'){ ++i; }
-    return i;
-}
-
-int main(){
-    char s[]   = "String in C is not a object.";
-    int length = strlen(s);
-}
-</pre> 
-<pre class="prettyprint" data-lang="C++">
-#include &lt;string&gt;
-using std::string;
-int main(){
-    string s   = "A string object in C++.";
-    int length = s.length();
-}
-</pre>   
-</article>
-</slide>
-
-
-<slide>
-<hgroup>
-<h2>Inheritance</h2>
-</hgroup>
-<article>
-
-<pre class="prettyprint" data-lang="C++">
-#include &lt;stdio.h&gt;
-struct Square{
-    int side;
-    int area(){ return side * side; }
-};
-
-struct Cube : public Square{ // Cube inherit Square
-    int volume(){ return area() * side; }
-};
-
-int main(){
-    Cube c;
-    c.side = 2;
-    printf("%d %d", c.area(), c.volume());
-    // output: 4 8
-}
-</pre>   
-</article>
-</slide>
 
 <slide>
 <hgroup>
@@ -1398,6 +1436,237 @@ b = temp;
 </hgroup>
 </slide>
 
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h2>&nbsp;</h2>
+<h2 class="Takahashi">What's wrong with Perl</h2>
+<h3 style="text-align:right;">http://www.garshol.priv.no/download/text/perl.html</h3>
+</hgroup>
+</slide>
+
+<!-- Python -->
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h2>&nbsp;</h2>
+<h1><img src="images/python_logo.png" alt="python-logo"/></h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h2>&nbsp;</h2>
+<h1 class="Takahashi">緣份</h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h2>&nbsp;</h2>
+<h2 class="Takahashi">GalGame in Linux</h1>
+</hgroup>
+</slide>
+
+<slide>
+  <article>
+    <img src="images/kj_scr.png" class="reflect" alt="katawa_shoujo" style="height:520px;">
+    <footer class="source">screenshot of the game "Katawa Shoujo"</footer>
+    <p>公式HP: http://katawa-shoujo.com</p>
+  </article>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">Ren'Py</h1>
+<h3 style="text-align:right;">a free visual novel engine (MIT license)</h3>
+</hgroup>
+</slide>
+
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">Surprise!!</h1>
+<h3 style="text-align:right;">when I google for what Python is</h3>
+</hgroup>
+</slide>
+
+<slide>
+    <hgroup>
+      <h2>A simple C program</h2>
+    </hgroup>
+    <article class="build">
+<pre class="prettyprint" data-lang="c">
+#include &lt;stdio.h&gt;
+
+int main(){
+    int a = 4;
+    if(a &gt;= 0)
+        a++;
+        if(a &lt;= 4)
+            a = 4;
+    else
+        a = 0;
+        
+    printf("%d\n", a);
+}
+</pre>
+    <p>=> 0</p>
+    </article>
+  </slide>
+  
+<slide>
+    <hgroup>
+      <h2>look-like program in Python</h2>
+    </hgroup>
+    <article class="build">
+<pre class="prettyprint" data-lang="python">
+a = 4
+
+if a &gt;= 0 :
+    a += 1
+
+    if a &lt;= 4 :
+        a = 4
+
+else :
+    a = 0
+
+print(a)
+</pre>
+    <p>=> 5</p>
+    </article>
+  </slide>
+  
+<slide>
+    <hgroup>
+      <h2>look-like program in Python</h2>
+    </hgroup>
+    <article>
+<pre class="prettyprint" data-lang="python">
+a = 4
+
+if a &gt;= 0 :
+    a += 1
+
+    if a &lt;= 4 :
+        a = 4
+
+    else :
+    a = 0
+
+print(a)
+</pre>
+    <p>=> 0</p>
+    </article>
+  </slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">潔癖</h1>
+<h3 class="centre">mysophobia</h3>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">For</h1>
+</hgroup>
+</slide>
+
+<slide>
+    <hgroup>
+      <h2>The for-loop in C</h2>
+    </hgroup>
+    <article>
+<pre class="prettyprint" data-lang="c">
+#include &lt;stdio.h&gt;
+
+int main(){
+    int ary[] = {1,2,3,4,5};
+    int i;
+    
+    for(i = 0 ; i &lt; 5 ; ++i){
+        printf("%d", ary(i));
+    }
+}
+</pre>
+
+<pre data-lang="output">
+12345
+</pre>
+    </article>
+  </slide>
+  
+<slide>
+    <hgroup>
+      <h2>The for-loop in Python</h2>
+    </hgroup>
+    <article>
+<pre class="prettyprint" data-lang="python">
+ary = [1,2,3,4,5, "XD!"]
+
+for i in ary :
+    print(i)
+</pre>
+<pre data-lang="output">
+1
+2
+3
+4
+5
+XD!
+</pre>
+    </article>
+  </slide>
+
+
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">Comprehension</h2>
+</hgroup>
+</slide>
+
+<slide>
+    <hgroup>
+      <h2>double ary to ary2</h2>
+    </hgroup>
+    <article>
+<pre class="prettyprint" data-lang="c">
+int main(){
+    int ary[] = {1, 2, 3};
+    int ary2[3];
+    int i;
+    
+    for(i = 0 ; i &lt; 3 ; ++i)
+        ary2[i] = ary[i] * 2;
+
+    // ary2 =&gt; [2, 4, 6]
+}
+</pre>
+    </article>
+  </slide>
+
+<slide>
+    <hgroup>
+      <h2>double ary to ary2</h2>
+    </hgroup>
+    <article>
+<pre class="prettyprint" data-lang="python">
+ary = [1,2,3]
+
+ary2 = [i*2 for i in ary]
+</pre>
+    </article>
+  </slide>
 
 <slide>
 <hgroup>
