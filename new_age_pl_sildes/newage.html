@@ -196,7 +196,7 @@ public:
 
 <slide>
 <hgroup>
-<h2>String in C/C++</h2>
+<h2>String in C</h2>
 </hgroup>
 <article>
 <pre class="prettyprint" data-lang="C">
@@ -211,6 +211,14 @@ int main(){
     int length = strlen(s);
 }
 </pre> 
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>String in C++</h2>
+</hgroup>
+<article>
 <pre class="prettyprint" data-lang="C++">
 #include &lt;string&gt;
 using std::string;
@@ -2030,7 +2038,195 @@ end
   </article>
 </slide>
 
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
 
+<h2 class="Takahashi">Let's print stars again</h2>
+</hgroup>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>Stars!</h2>
+  </hgroup>
+  <article>
+<pre class="prettyprint" data-lang="ruby">
+(1..5).each do |i|
+  puts "*" * i
+end
+</pre>
+
+<pre data-lang="output">
+*
+**
+***
+****
+*****
+</pre>
+  </article>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 >&nbsp;</h1>
+<h1 class="Takahashi">Fuction</h1>
+</hgroup>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>Fibonacci Sequence</h2>
+  </hgroup>
+  <article>
+<pre class="prettyprint" data-lang="ruby">
+def fib(n)
+  if n &lt; 2
+    n
+  else
+    fib(n-1) + fib(n-2)
+  end
+end
+
+fib(5) # =&gt; 5
+fib 6  # =&gt; 8
+</pre>
+  </article>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>????</h2>
+  </hgroup>
+  <article>
+<pre class="prettyprint" data-lang="ruby">
+def foo
+end
+</pre>
+
+<pre class="prettyprint" data-lang="ruby">
+# call foo
+foo # =&gt; nil 
+</pre>
+  </article>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>Fibonacci Sequence Ver.2</h2>
+  </hgroup>
+  <article>
+<pre class="prettyprint" data-lang="ruby">
+def fib(n)
+  return n if n &lt; 2
+  fib(n-1) + fib(n-2)
+end
+
+puts fib(5) # =&gt; 5
+puts fib 6  # =&gt; 8
+</pre>
+  </article>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 >&nbsp;</h1>
+<h1 class="Takahashi">Naming</h1>
+</hgroup>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>Variable naming</h2>
+  </hgroup>
+  <article>
+<pre>
+CONSTANTS
+
+$global_variable
+
+local_variable
+
+@instance_variable
+
+@@class_variale
+</pre>
+  </article>
+</slide>
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 >&nbsp;</h1>
+<h1 class="Takahashi">OOP</h1>
+</hgroup>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>Class in C++</h2>
+  </hgroup>
+  <article>
+<pre class="prettyprint" data-lang="c++">
+class Cat{
+    string name_;
+    int    age_;
+public:
+    Cat(const string&amp; name, int age){
+        name_ = name;
+        age_ = age;
+    }
+
+    void setAge(int age){ age_ = age; }
+    int  getAge(){ return age_; }
+};
+</pre>
+  </article>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>Class in Ruby</h2>
+  </hgroup>
+  <article>
+<pre class="prettyprint" data-lang="ruby">
+class Cat
+  def initialize(name, age)
+    @name, @age = name, age
+  end
+  
+  def age
+    @age
+  end
+
+  def age=(age)
+    @age = age
+  end
+
+end
+</pre>
+  </article>
+</slide>
+
+<slide>
+  <hgroup>
+    <h2>Class in Ruby Ver.2</h2>
+  </hgroup>
+  <article>
+<pre class="prettyprint" data-lang="ruby">
+class Cat
+  attr_accessor :age
+
+  def initialize(name, age)
+    @name, @age = name, age
+  end
+
+end
+</pre>
+  </article>
+</slide>
 
 <slide>
 <hgroup>
