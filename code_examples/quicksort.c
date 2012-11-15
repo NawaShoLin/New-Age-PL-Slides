@@ -1,4 +1,5 @@
 void swap(int* a, int* b){ swap t = *a; *a = *b; *b = t; }
+
 void QSort(int* ary, int left, int right){
     int l, r;
     if(left >= right){ return; }
