@@ -20,7 +20,7 @@ var SLIDE_CONFIG = {
   presenters: [{
     name: 'N.S. Lin',
     company: 'Troll, NTNU.tw',
-    gplus: 'http://plus.google.com/1234567890',
+    gplus: 'https://plus.google.com/113261671659386871611',
     twitter: '',
     www: 'http://www.csie.ntnu.edu.tw/~u99256',
     github: 'http://github.com/NawaShoLin'

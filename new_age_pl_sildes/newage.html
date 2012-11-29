@@ -135,9 +135,63 @@ URL: https://code.google.com/p/io-2012-slides
 </hgroup>
 <article>
 <ul>
-<li>Sequence</li>
-<li>Selection</li>
-<li>Repetition</li>
+<li>Sequence<br>
+<svg width="100" height="64" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <line id="svg_19" y2="34.5" x2="49" y1="35.5" x1="9" stroke="#000000" fill="none"/>
+  <line id="svg_20" y2="27.5" x2="39" y1="34.5" x1="49" stroke="#000000" fill="none"/>
+  <line id="svg_21" y2="42.5" x2="40" y1="36.5" x1="47" stroke="#000000" fill="none"/>
+  <line id="svg_22" y2="33.5" x2="87" y1="33.5" x1="59" stroke="#000000" fill="none"/>
+  <line id="svg_24" y2="23.5" x2="78" y1="33.5" x1="89" stroke="#000000" fill="none"/>
+  <line id="svg_25" y2="44.5" x2="81" y1="34.5" x1="88" stroke="#000000" fill="none"/>
+ </g>
+</svg>
+</li>
+<li>Selection<br/>
+<svg width="200" height="80" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <circle id="svg_1" r="8.0625" cy="42.5" cx="101" stroke="#000000" fill="#ffff56"/>
+  <line id="svg_2" y2="43.5" x2="91" y1="43.5" x1="33" stroke="#000000" fill="none"/>
+  <line id="svg_3" y2="36.5" x2="81" y1="43.5" x1="92" stroke="#000000" fill="none"/>
+  <line id="svg_4" y2="50.5" x2="82" y1="42.5" x1="91" stroke="#000000" fill="none"/>
+  <line id="svg_5" y2="18.5" x2="133" y1="38.5" x1="108" stroke="#000000" fill="none"/>
+  <line id="svg_6" y2="63.5" x2="133" y1="45.5" x1="107" stroke="#000000" fill="none"/>
+  <line id="svg_7" y2="28.5" x2="134" y1="17.5" x1="134" stroke="#000000" fill="none"/>
+  <line id="svg_8" y2="16.5" x2="122" y1="17.5" x1="136" stroke="#000000" fill="none"/>
+  <line id="svg_9" y2="50.5" x2="131" y1="63.5" x1="134" stroke="#000000" fill="none"/>
+  <line id="svg_10" y2="65.5" x2="118" y1="63.5" x1="134" stroke="#000000" fill="none"/>
+ </g>
+</svg>
+</li>
+<li>Repetition<br>
+<svg width="300" height="120" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <line id="svg_10" y2="56.5" x2="80" y1="57.5" x1="11" stroke="#000000" fill="none"/>
+  <line id="svg_11" y2="47.5" x2="65" y1="56.5" x1="80" stroke="#000000" fill="none"/>
+  <line id="svg_12" y2="65.5" x2="67" y1="56.5" x1="81" stroke="#000000" fill="none"/>
+  <circle id="svg_16" r="9.21875" cy="57.5" cx="92" stroke="#000000" fill="#ffff56"/>
+  <line id="svg_17" y2="56.5" x2="135" y1="56.5" x1="105" stroke="#000000" fill="none"/>
+  <line id="svg_18" y2="47.5" x2="122" y1="56.5" x1="135" stroke="#000000" fill="none"/>
+  <line id="svg_19" y2="64.5" x2="122" y1="56.5" x1="136" stroke="#000000" fill="none"/>
+  <rect id="svg_20" height="22" width="75" y="46.5" x="137" stroke="#000000" fill="#ffaaaa"/>
+  <line id="svg_21" y2="83.5" x2="205" y1="69.5" x1="204" stroke="#000000" fill="none"/>
+  <line id="svg_23" y2="83.5" x2="37" y1="83.5" x1="207" stroke="#000000" fill="none"/>
+  <line id="svg_24" y2="58.5" x2="56" y1="83.5" x1="37" stroke="#000000" fill="none"/>
+  <line id="svg_25" y2="68.5" x2="57" y1="58.5" x1="56" stroke="#000000" fill="none"/>
+  <line id="svg_26" y2="62.5" x2="45" y1="57.5" x1="56" stroke="#000000" fill="none"/>
+  <line id="svg_27" y2="11.5" x2="151" y1="48.5" x1="96" stroke="#000000" fill="none"/>
+  <line id="svg_28" y2="24.5" x2="144" y1="11.5" x1="151" stroke="#000000" fill="none"/>
+  <line id="svg_29" y2="12.5" x2="136" y1="10.5" x1="152" stroke="#000000" fill="none"/>
+ </g>
+</svg>
+</li>
+
 <li>Subroutine</li>
 </ul>
 </article>
@@ -154,9 +208,22 @@ URL: https://code.google.com/p/io-2012-slides
 
 <slide>
 <hgroup>
+<h2>Factorial in Haskell</h2>
+</hgroup>
+<article>
+<pre class="prettyprint" data-lang="haskell">
+factorial :: (Integral a) =&gt; a -&gt; a   
+factorial 0 = 1   
+factorial n = n * factorial (n - 1) 
+</pre>    
+</article>
+</slide>
+
+<slide>
+<hgroup>
 <h3 class="Takahashi">Object-Oriented Programming</h3>
 <h1 class="Takahashi">OOP</h1>
-<h3 style="text-align:center;">Smalltalk, C++, Ruby ...</h3>
+<h3 style="text-align:center;">Simula, Smalltalk, C++, Ruby ...</h3>
 </hgroup>
 </slide>
 
@@ -739,8 +806,6 @@ a = 3.1415926    # 'a' is a float now
 </hgroup>
 <article class="build">
 <pre class="prettyprint" data-lang="c">
-#include &lt;stdio.h&gt;
-
 typedef struct{
   int foot_num;
   /* ... */
@@ -750,10 +815,31 @@ typedef struct{
   int foot_num;
   /* ... */
 } Human;
+</pre>
+</article>
+</slide>
 
+<slide>
+<hgroup>
+<h2>Non-Duck-Typing</h2>
+</hgroup>
+<article class="build">
+<pre class="prettyprint" data-lang="c">
+#include &lt;stdio.h&gt;
 
 void DuckWalk(Duck duck){
     printf("I walk with %d feet!\n", duck.foot_num);
+}
+
+void HumanWalk(Human human){
+    printf("I walk with %d feet!\n", human.foot_num);
+}
+
+int main(){
+    Duck d;  Human h;
+    
+    DuckWalk(d);
+    HumanWalk(h);
 }
 </pre>
 </article>
@@ -767,19 +853,36 @@ void DuckWalk(Duck duck){
 <pre class="prettyprint" data-lang="ruby">
 class Duck
   def quack()
-    puts "Quaaaaaaack!"
+    "Quaaaaaaack!"
   end
 end
 
 class Human
   def quack()
-    puts "XDDDDDDD!"
+    "XDDDDDDD!"
   end
 end
+</pre>
+</article>
+</slide>
 
+<slide>
+<hgroup>
+<h2>Duck-Typing in Ruby</h2>
+</hgroup>
+<article class="build">
+<pre class="prettyprint" data-lang="ruby">
 def duck_quack(duck)
-  duck.quack()
+  puts duck.quack()
 end
+
+d = Duck.new
+
+h = Human.new
+
+duck_quack(d) # =&gt; Quaaaaaaack!
+
+duck_quack(h) # =&gt; XDDDDDDD!
 </pre>
 </article>
 </slide>
@@ -981,8 +1084,12 @@ void SetAryValue(<b>int a[]</b>, int v, <b>int length</b>){
 
 <pre class="prettyprint" data-lang="c">
 int main(){
-    int numbers[1000], n, temp, i;
+    int numbers[<b>1000</b>], n, temp, i;
+    
+    /* how many numbers user want */
     scanf("%d", &n);
+    
+    /* get user inputs */
     for(i = 0 ; i &lt; n ; ++i)
         scanf("%d", &numbers[i]);
 }
@@ -1110,7 +1217,7 @@ c = a + [3,2,1] # =&gt; [1, 2, 3, 4, 3, 2, 1]
 
 <slide>
 <hgroup>
-<h2>Mutitype</h2>
+<h2>Muti-type</h2>
 </hgroup>
 <article>
 
@@ -1422,6 +1529,19 @@ b = temp;
 </article>
 </slide>
 
+<slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <q>
+        Most of you are familiar with the virtues of a programmer. There are three, of course: laziness, impatience, and hubris.
+      </q>
+      <div class="author">
+        Larry Wall
+      </div>
+    </article>
+  </slide>
+
+
 <slide>
 <hgroup>
 <h1 class="Takahashi">&nbsp;</h1>
@@ -1536,7 +1656,7 @@ int main(){
   
 <slide>
     <hgroup>
-      <h2>look-like program in Python</h2>
+      <h2>A similar program in Python</h2>
     </hgroup>
     <article class="build">
 <pre class="prettyprint" data-lang="python">
@@ -1559,7 +1679,7 @@ print(a)
   
 <slide>
     <hgroup>
-      <h2>look-like program in Python</h2>
+      <h2>A similar program in Python</h2>
     </hgroup>
     <article>
 <pre class="prettyprint" data-lang="python">
@@ -1788,6 +1908,14 @@ def quick_sort(ary):
 </hgroup>
 </slide>
 
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="centre">Be Lazy and Safe, use</h1>
+<h1 class="Takahashi">Library</h1>
+</hgroup>
+</slide>
+
 
 <slide>
   <hgroup>
@@ -1812,12 +1940,38 @@ int main(){
 
 <slide>
   <hgroup>
+    <h2>"sort" in C++</h2>
+  </hgroup>
+  <article>
+<pre class="prettyprint" data-lang="c++">
+#include &lt;stdio.h&gt;
+#include &lt;algorithm&gt;
+using std::sort;
+
+int main(){
+    int a[] = {1, 3, 2, 4};    
+    sort(a, a + 4);
+
+    for(int i = 0 ; i &lt; 4 ; ++i)
+        printf("%d ", a[i]);
+    // => 1 2 3 4
+}
+
+</pre>
+  </article>
+</slide>
+
+<slide>
+  <hgroup>
     <h2>"sort" in Python</h2>
   </hgroup>
   <article>
 <pre class="prettyprint" data-lang="python">
 a = [1, 3, 2, 4]
+
 b = a.sort()
+# =&gt; [1, 2, 3, 4]
+
 </pre>
   </article>
 </slide>
@@ -1952,14 +2106,16 @@ else
   <hgroup>
     <h2>if Modifier</h2>
   </hgroup>
-  <article>
+  <article class="build">
 <pre class="prettyprint" data-lang="ruby">
 age = person.age
 
 if age &lt; 12 then
   puts "I am loli!"
 end
+</pre>
 
+<pre class="prettyprint" data-lang="ruby">
 # can rewrite it to..
 
 puts "I am loli!" <b>if age &lt; 12</b>
@@ -2025,6 +2181,12 @@ a.each do |i|
   puts i
 end
 </pre>
+
+<pre data-lang="output">
+3
+2
+1
+</pre>
   </article>
 </slide>
 
@@ -2032,7 +2194,7 @@ end
   <hgroup>
     <h2>each (hash table)</h2>
   </hgroup>
-  <article>
+  <article class="build">
 <pre class="prettyprint" data-lang="ruby">
 table = { 'T.C. Chiang' =&gt; 'I love Jolin',
           'J.G. Wu'     =&gt; '不要為難我'}
@@ -2040,6 +2202,12 @@ table = { 'T.C. Chiang' =&gt; 'I love Jolin',
 table.each do |name, msg|
   puts "#{name} says: #{msg}."
 end
+</pre>
+
+<pre data-lang="output">
+T.C. Chiang says: I love Jolin.
+J.G. Wu says: 不要為難我.
+
 </pre>
   </article>
 </slide>
@@ -2129,8 +2297,8 @@ def fib(n)
   fib(n-1) + fib(n-2)
 end
 
-puts fib(5) # =&gt; 5
-puts fib 6  # =&gt; 8
+(1..10).each {|x| puts fib(x)}
+# =&gt; 1 1 2 3 5 8 13 21 34 55
 </pre>
   </article>
 </slide>
@@ -2272,7 +2440,17 @@ my_cat.age = my_cat.age + 1
   </article>
 </slide>
 
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+
+<h2 class="Takahashi">Language Scopes</h2>
+</hgroup>
+</slide>
+
+
 <!-- more about Polymorphism and duck typing -->
+<!-- 0 == false or 0 == true?  -->
 
 <slide>
 <hgroup>
@@ -2314,7 +2492,19 @@ my_cat.age = my_cat.age + 1
 <h2>References</h2>
 </hgroup>
 <article>
-
+<ul>
+<li>The Ruby Programming Language<br/> by David Flangan & Yukihiro Matsumoto, O'REILLY</li>
+<li>Learning Perl by Randal L. Schwartz, Tom Phoenix & brian a foy , O'REILLY</li>
+<li>Programming Python by Mark Lutz, O'REILLY</li>
+<li>Concepts of Programming Languages by Robert W. Sebesta, PEARSON</li>
+<li>まつもとゆきひろ コードの世界~スーパー・プログラマになる14の思考法<br> by まつもとゆきひろ, 日経Linux</li>
+<li>Practical Common Lisp by Peter Seibel</li>
+<li>JavaScript: The Good Parts by Douglas Crockford, O'REILLY</li>
+<li>What's wrong with Perl http://www.garshol.priv.no/download/text/perl.html</li>
+<li>Haskell趣學指南 http://learnyouahaskell-zh-tw.csie.org</li>
+<li>http://linuxdevcenter.com/pub/a/linux/2001/11/29/ruby.html</li>
+<li>http://www.informit.com/articles/article.aspx?p=18225</li>
+</ul>
 </article>
 
 </slide>  
