@@ -119,6 +119,21 @@ URL: https://code.google.com/p/io-2012-slides
   </article>
 </slide>
 
+<slide>
+  <hgroup>
+    <h2>Scripting Languages</h2>
+  </hgroup>
+  <article>
+     <ul>
+     <li>Perl</li>
+     <li>Python</li>
+     <li>Ruby</li>
+     <li>JavaScript</li>
+     </ul>
+     <p>And more...</p>
+  </article>
+</slide>
+
 
 <slide>
 <hgroup>
@@ -223,7 +238,7 @@ factorial n = n * factorial (n - 1)
 <hgroup>
 <h3 class="Takahashi">Object-Oriented Programming</h3>
 <h1 class="Takahashi">OOP</h1>
-<h3 style="text-align:center;">Simula, Smalltalk, C++, Ruby ...</h3>
+<h3 style="text-align:center;">Simula, Smalltalk, C++, Java, Ruby ...</h3>
 </hgroup>
 </slide>
 
@@ -325,20 +340,7 @@ int main(){
 </article>
 </slide>
 
-<slide>
-  <hgroup>
-    <h2>Scripting Languages</h2>
-  </hgroup>
-  <article>
-     <ul>
-     <li>Perl</li>
-     <li>Python</li>
-     <li>Ruby</li>
-     <li>JavaScript</li>
-     </ul>
-     <p>And more...</p>
-  </article>
-</slide>
+
 
 <slide class="segue dark quote nobackground">
   <aside class="gdbar right bottom"><img alt="google_icon" src="images/google_developers_icon_128.png"></aside>
@@ -925,6 +927,64 @@ min([1,2,3], [3,2,1])   # =&gt; [1, 2, 3]
 </hgroup>
 </slide>
 
+
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="Takahashi">Number</h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>int Overflow in C</h2>
+</hgroup>
+<article>
+<pre class="prettyprint" data-lang="c">
+#include &lt;stdio.h&gt;
+
+int main(){
+    int four_pow[100] = {1}, i;
+    for(i = 1 ; i &lt; 100 ; ++i)
+        four_pow[i] = four_pow[i-1] * 4;
+
+    for(i = 0 ; i &lt; 100 ; ++i)
+        printf("4 ^ %d = %d \n", i, four_pow[i]);
+}
+</pre>
+
+<pre data-lang="output">
+4 ^ 0 = 1         4 ^ 14 = 268435456 
+4 ^ 1 = 4         4 ^ 15 = 1073741824 
+4 ^ 2 = 16        4 ^ 16 = 0 
+4 ^ 3 = 64        4 ^ 17 = 0 
+....
+</pre>
+
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>int Overflow in Ruby?</h2>
+</hgroup>
+<article class="build">
+<pre class="prettyprint" data-lang="ruby">
+puts 4 ** 0 # =&gt; 1
+puts 4 ** 1 # =&gt; 4
+
+puts 4 ** 15 # =&gt; 1073741824
+puts 4 ** 16 # =&gt; 4294967296
+</pre>
+
+<pre class="prettyprint" data-lang="ruby">
+puts 4 ** 100
+# =&gt; 1606938044258990275541962092341162602522202993782792835301376
+</pre>
+
+</article>
+</slide>
+
 <slide>
 <hgroup>
 <h2 class="Takahashi">&nbsp;</h2>
@@ -1056,9 +1116,9 @@ for(i = 0 ; <b>i &lt;= 100</b> ; ++i)
 <article>
 
 <pre class="prettyprint" data-lang="c">
-<b>#define ARY1_LEN 40 // Macro is bad.
+#define ARY1_LEN 40 // Macro is bad.
 #define ARY2_LEN 20
-#define STR1_SIZE 36</b>
+#define STR1_SIZE 36
 
 int main(){
     int ary1[ARY1_LEN], ary2[ARY2_LEN];
@@ -1208,6 +1268,7 @@ a = [1,2,3,4]
 
 #copy
 b = list(a)     # b is a clone of a
+                # b = [1, 2, 3, 4]
 
 #merge
 c = a + [3,2,1] # =&gt; [1, 2, 3, 4, 3, 2, 1] 
@@ -1353,6 +1414,7 @@ d # =&gt; {2: 'number', (2, 4, 6): 'tuple', 'XD': 'string'}
 <hgroup>
 <h2 class="Takahashi">&nbsp;</h2>
 <h1 class="Takahashi">swap!</h1>
+<h1 class="centre">for example</h1>
 </hgroup>
 </slide>
 
@@ -1374,7 +1436,7 @@ int main(){
 <pre class="prettyprint" data-lang="c">
 int main(){
     int a, b;
-    a ^= b ^= a ^= b;
+    a ^= b ^= a ^= b; // &lt;= looks cool?
 }
 </pre>
 <p class="red">Don't use this!</p>
@@ -1463,7 +1525,8 @@ b = temp;
 
 <slide>
 <hgroup>
-<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="centre">Just write</h1>
 <h1 class="Takahashi">a, b = b, a</h1>
 </hgroup>
 </slide>
@@ -1471,6 +1534,7 @@ b = temp;
 <slide>
 <hgroup>
 <h3 style="text-align:center;">&nbsp;</h3>
+<h1 class="centre">Lots of products are</h1>
 <h1 class="Takahashi" style="text-align:center;">Open Source</h1>
 </hgroup>
 </slide>
@@ -1607,7 +1671,7 @@ b = temp;
 
 <slide>
   <article>
-    <img src="images/kj_scr.png" class="reflect" alt="katawa_shoujo" style="height:520px;">
+    <img src="images/kj_scr.png" class="reflect" alt="katawa_shoujo" style="height:520px;"> free game!
     <footer class="source">screenshot of the game "Katawa Shoujo"</footer>
     <p>公式HP: http://katawa-shoujo.com</p>
   </article>
@@ -1856,6 +1920,15 @@ function quicksort('array')
     </article>
   </slide>
   
+  <slide>
+    <hgroup>
+      <h2>It's simple!</h2>
+    </hgroup>
+    <article>
+      <img src="images/quick_sort.png" alt="qsort" />
+    </article>
+  </slide>
+  
 
 <slide>
     <hgroup>
@@ -1883,6 +1956,14 @@ void QSort(int* ary, int left, int right){
 </pre>
     </article>
   </slide>
+  
+<slide>
+<hgroup>
+<h2 class="Takahashi">&nbsp;</h2>
+<h1 class="centre">What's that</h1>
+<h1 class="Takahashi">?_?</h1>
+</hgroup>
+</slide>
 
   <slide>
     <hgroup>
@@ -2197,7 +2278,8 @@ end
   <article class="build">
 <pre class="prettyprint" data-lang="ruby">
 table = { 'T.C. Chiang' =&gt; 'I love Jolin',
-          'J.G. Wu'     =&gt; '不要為難我'}
+          'J.G. Wu'     =&gt; '不要為難我'
+          'Komica'      =&gt; 'My url is : komica.org'}
 
 table.each do |name, msg|
   puts "#{name} says: #{msg}."
@@ -2207,7 +2289,7 @@ end
 <pre data-lang="output">
 T.C. Chiang says: I love Jolin.
 J.G. Wu says: 不要為難我.
-
+Komica says: My url is : komica.org.
 </pre>
   </article>
 </slide>
@@ -2442,34 +2524,104 @@ my_cat.age = my_cat.age + 1
 
 <slide>
 <hgroup>
-<h1 class="Takahashi">&nbsp;</h1>
+<h2>Google/Wiki these yourself</h2>
+</hgroup>
+<article>
+<ul>
+<li>Interpreter and Compiler</li>
+<li>Java virtual machine</li>
+<li>Closure</li>
+<li>Mix-in</li>
+<li>Polymorphism</li>
+<li>Go language</li>
+</article>
+</slide>
 
-<h2 class="Takahashi">Language Scopes</h2>
+<slide>
+<hgroup>
+<h1 class="Takahashi">&nbsp;</h1>
+<h2 class="Takahashi">Time to Chat</h2>
 </hgroup>
 </slide>
 
+<slide>
+<hgroup>
+<h2>Why we learn C ?</h2>
+</hgroup>
+<article>
+<ul  class="build">
+<li>Professores learnt C</li>
+<li>Your boss wants you use C</li>
+<li>C can run fast</li>
+<li>C is close to hardwares</li>
+<li>You can get kownedges of computer science from C</li>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>Why we learn Ruby, Python... ?</h2>
+</hgroup>
+<article>
+<ul  class="build">
+<li>Funny</li>
+<li>Easy to learn</li>
+<li>Coding fast</li>
+<li>Easy to read</li>
+<li>Close to humans</li>
+<li>Useful</li>
+<li>為什麼要學各種程式語言 http://qmono2.blogspot.tw/2012/11/blog-post.html</li>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h1 style="margin-top:20px;">
+<img src="images/rails-logo.png" alt="ruby-logo" style="height:480px;"/>
+</h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h1 style="margin-top:20px;">
+<img src="images/django.png" alt="django" style="height:480px;"/>
+</h1>
+</hgroup>
+</slide>
+
+
+<slide>
+<hgroup>
+<h1 style="margin-top:20px;">
+<img src="images/pygame_logo.gif" alt="pygame-logo" style="width:720px;"/>
+</h1>
+</hgroup>
+</slide>
+
+<slide>
+<hgroup>
+<h2>While computers are faster and faster</h2>
+</hgroup>
+<article>
+<ul  class="build">
+<li>Let computers do the hardworks</li>
+<li>Coding fast is more important than runing fast</li>
+</article>
+</slide>
+
+<slide>
+<hgroup>
+<h2>If you can code 500 lines per day</h2>
+</hgroup>
+<article>
+<ul  class="build">
+<li>500 lines of Perl/Ruby/Python do more things than 500 lines of C/C++/Java do</li>
+</article>
+</slide>
 
 <!-- more about Polymorphism and duck typing -->
 <!-- 0 == false or 0 == true?  -->
-
-<slide>
-<hgroup>
-<h1 class="Takahashi">&nbsp;</h1>
-
-<h2 class="Takahashi">More issues</h2>
-</hgroup>
-</slide>
-
-
-
-
-<slide>
-<hgroup>
-<h1 class="Takahashi">&nbsp;</h1>
-<h2 class="Takahashi">Interpreter </h2>
-<h2 class="Takahashi">and Compiler</h2>
-</hgroup>
-</slide>
 
 
 <slide>
@@ -2532,7 +2684,7 @@ see infos at <a herf="http://code.google.com/p/io-2012-slides/">http://code.goog
     <aside class="gdbar right"><img alt="google_icon" src="images/google_developers_icon_128.png"></aside>
     <article class="flexbox vleft auto-fadein">
       <h2>&lt;Thank You!&gt;</h2>
-      <p>Important contact information goes here.</p>
+      <!-- <p>Important contact information goes here.</p> -->
     </article>
     <p class="auto-fadein" data-config-contact>
       <!-- populated from slide_config.json -->
