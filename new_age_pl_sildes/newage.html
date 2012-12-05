@@ -80,7 +80,7 @@ URL: https://code.google.com/p/io-2012-slides
   <hgroup>
     <h2>1960s</h2>
   </hgroup>
-  <article>
+  <article class="build">
     <ul>
      <li>Pascal</li>
      <li>C</li>
@@ -88,6 +88,9 @@ URL: https://code.google.com/p/io-2012-slides
        <ul><li>Object-Oriented Programming</li></ul>
      </li>
     </ul>
+    <p>
+    <img src="images/linss.jpg" alt="nilss" /> : Pascal is elegant.
+    </p>
   </article>
 </slide>
 
@@ -307,6 +310,7 @@ using std::string;
 int main(){
     string s   = "A string object in C++.";
     int length = s.length();
+    // =&gt; 23
 }
 </pre>   
 </article>
@@ -459,6 +463,7 @@ void Stars(int n, int end){
 <hgroup>
 <h3 class="Takahashi">Object-Oriented Programming</h3>
 <h1 class="Takahashi">OOP</h1>
+<h1 style="text-align:right">I've told you.</h1>
 </hgroup>
 </slide>
 
@@ -527,11 +532,11 @@ float myAbs(float a){...}
 
 int main(){
     int   n = -10;
-    float f = -20.0;
+    float f = -20.2;
 
     // both of n and f can use "myABS"
-    myAbs(n);
-    myAbs(f);
+    myAbs(n); // =&gt; 10
+    myAbs(f); // =&gt; 20.2
 }
 </pre>   
 </article>
@@ -585,7 +590,7 @@ public class Garbage{
             Cat neko = new Cat();
             // do not need to delete
         }
-        // no Cats here
+        // we don't need to kill the cats :)
     }
 }
 </pre>   
@@ -600,6 +605,7 @@ public class Garbage{
       <ul>
         <li>Operator Overloading</li>
         <li>Reference</li>
+        <li>Interface</li>
         <li>Generic Type</li>
         <li>Namespace</li>
         <li>Exception Handling</li>
@@ -688,7 +694,7 @@ public class Garbage{
 
 <slide>
 <hgroup>
-<h2>A Table by C Beginner</h2>
+<h2>A Table by a C Beginner</h2>
 </hgroup>
 <article>
 
@@ -723,7 +729,7 @@ int main(){
 
 <slide>
 <hgroup>
-<h2>A Table by <span class="red">Ruby</span> Beginner</h2>
+<h2>A Table by a <span class="red">Ruby</span> Beginner</h2>
 </hgroup>
 <article>
 
@@ -734,6 +740,7 @@ table["Hanako"] = "playing GalGame"
 
 # find hobby of Hanako
 puts table["Hanako"]
+# =&gt; playing GalGame
 </pre>   
 </article>
 </slide>
@@ -966,6 +973,34 @@ int main(){
 
 <slide>
 <hgroup>
+<h2>Bugs are around us..</h2>
+</hgroup>
+<article>
+<pre class="prettyprint" data-lang="c">
+#include &lt;stdio.h&gt;
+#include &lt;limits.h&gt;
+
+// to count N's cool-number less than 40000000
+// Eg. cool number of '2' is: 2, 4, 16, 256, 65536 ...
+
+int main(){
+    int i, j, count;
+    for(i = 2 ; i &lt; 100 ; ++i){
+        count = 0;
+        for(j = i ; j &lt;= 40000000 ; j *= j){
+            ++count;
+        }
+        printf("%d : %d \n", i, count);
+    }
+}
+</pre>
+
+
+</article>
+</slide>
+
+<slide>
+<hgroup>
 <h2>int Overflow in Ruby?</h2>
 </hgroup>
 <article class="build">
@@ -1116,13 +1151,12 @@ for(i = 0 ; <b>i &lt;= 100</b> ; ++i)
 <article>
 
 <pre class="prettyprint" data-lang="c">
-#define ARY1_LEN 40 // Macro is bad.
-#define ARY2_LEN 20
-#define STR1_SIZE 36
+#define ARY1_LEN 5 // Macro is bad.
+#define ARY2_LEN 4
 
 int main(){
-    int ary1[ARY1_LEN], ary2[ARY2_LEN];
-    char str1[STR1_SIZE];
+    int ary1[ARY1_LEN] = {0}; // =&gt; {0, 0, 0, 0, 0}
+    int ary2[ARY2_LEN] = {1}; // =&gt; {1, 0, 0, 0}
 }
 
 // 2 parameters to send an array.
@@ -1714,7 +1748,7 @@ int main(){
     printf("%d\n", a);
 }
 </pre>
-    <p>=> 0</p>
+    <p>=&gt; 0</p>
     </article>
   </slide>
   
@@ -1737,7 +1771,7 @@ else :
 
 print(a)
 </pre>
-    <p>=> 5</p>
+    <p>=&gt; 5</p>
     </article>
   </slide>
   
@@ -1760,7 +1794,7 @@ if a &gt;= 0 :
 
 print(a)
 </pre>
-    <p>=> 0</p>
+    <p>=&gt; 0</p>
     </article>
   </slide>
 
@@ -2035,7 +2069,7 @@ int main(){
 
     for(int i = 0 ; i &lt; 4 ; ++i)
         printf("%d ", a[i]);
-    // => 1 2 3 4
+    // =&gt; 1 2 3 4
 }
 
 </pre>
